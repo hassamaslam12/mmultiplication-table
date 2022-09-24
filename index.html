@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLICATION TABLE</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            flex-direction: column;
+        }
+        .centre
+        {
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centre">
+        <form  class="centre" onsubmit ="doCheck() ; return false">
+            Enter a number to print table of : 
+            <input type="number" id="number">
+            Enter the number upto which the table should be printed
+            <input type="number" id="numberUpTo">
+            <button type="submit">Submit</button>
+        </form>
+        <h2 id="result"></h2>
+            
+    </div>
+
+    <script>
+        function doCheck(){
+            let number = +document.querySelector("#number").value
+            let numberUpTo = +document.querySelector("#numberUpTo").value
+            console.log("number : ",number)
+            console.log("numberUpto : ",numberUpTo)
+            for (let i = 0; i < numberUpTo ; i++) {
+                let result = `${number} * ${i+1} = ${number*(i+1)}`
+                document.querySelector("#result").innerHTML=result;
+                console.log(`${number} * ${i+1} = ${number*(i+1)}`)
+                // document.write(`${number} * ${i+1} = ${number*(i+1)} <br>`)
+                
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>
