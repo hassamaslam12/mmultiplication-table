@@ -38,15 +38,17 @@
 
     <script>
         function doCheck(){
+            let result = ""
             let number = +document.querySelector("#number").value
             let numberUpTo = +document.querySelector("#numberUpTo").value
             console.log("number : ",number)
             console.log("numberUpto : ",numberUpTo)
             for (let i = 0; i < numberUpTo ; i++) {
-                let result = `${number} * ${i+1} = ${number*(i+1)}`
-                document.querySelector("#result").innerHTML=result;
+                 result = 
+                 `${result} <br>${number} * ${i+1} = ${number*(i+1)}`
                 console.log(`${number} * ${i+1} = ${number*(i+1)}`)
                 // document.write(`${number} * ${i+1} = ${number*(i+1)} <br>`)
+                document.querySelector("#result").innerHTML=result;
                 
             }
 
